@@ -1,46 +1,56 @@
-/* Nav bar full width + padding */
-nav {
+/* --- NAVBAR FIX --- */
+.navbar {
   background-color: #004c8c;
-  padding: 16px 0;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8em;
+  margin: 0;
+  color: white;
+}
+
+/* Nav links on right */
+.nav-links {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   list-style: none;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-nav li a {
+.nav-links a {
   color: white;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1em;
 }
 
-nav li a:hover {
+.nav-links a:hover {
   opacity: 0.7;
 }
 
-/* Name header at top-left */
-.hero {
-  background-color: #fdfaf4;
-  padding: 30px 40px;
-  text-align: left;
+/* --- PHOTO GALLERY FIX --- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.8em;
-  margin: 0;
-  color: #1a1a1a;
+.gallery img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
-/* Main content styling remains the same */
