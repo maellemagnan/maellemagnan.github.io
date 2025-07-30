@@ -2,15 +2,16 @@
 .navbar {
   background-color: #004c8c;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 14px 40px;
+  gap: 60px; /* space between name and links */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .site-title {
   font-family: 'Playfair Display', Georgia, serif;
@@ -49,7 +50,7 @@
 }
 
 .gallery img {
-  width: 220px;
+  width: 280px; /* or 260px if you want */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
