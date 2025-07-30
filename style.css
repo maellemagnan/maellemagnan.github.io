@@ -1,6 +1,8 @@
+/* Nav bar full width + padding */
 nav {
   background-color: #004c8c;
-  padding: 10px 0;
+  padding: 16px 0;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -10,23 +12,35 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav li {
-  margin: 0 20px;
-}
-
-nav a {
+nav li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1em;
-  transition: opacity 0.2s;
 }
 
-nav a:hover {
+nav li a:hover {
   opacity: 0.7;
 }
+
+/* Name header at top-left */
+.hero {
+  background-color: #fdfaf4;
+  padding: 30px 40px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8em;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+/* Main content styling remains the same */
