@@ -40,10 +40,10 @@ body {
 
 /* ===== Main Content Box ===== */
 main {
-  background-color: #fdfaf4; /* Cream */
-  max-width: 800px;
+  background-color: #f5efe3;
+  max-width: 1000px; /* or try 960px if you want slightly less */
   margin: 40px auto;
-  padding: 40px;
+  padding: 60px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   line-height: 1.6;
