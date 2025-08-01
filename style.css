@@ -150,38 +150,75 @@ a {
 /* ===== Intro formatting ===== */
 
 
-.intro-split {
+.hero-section {
   display: flex;
-  min-height: 80vh;
-  margin: 0px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
-
-.headshot-full {
-  flex: 1;
-  max-width: 50%;
-}
-
-.headshot-full {
-  flex: 1;
-  max-width: 50%;
-  background-color: transparent; /* ensure no color */
-}
-
-.intro-text {
-  flex: 1;
-  background-color: #fff7e6; /* cream */
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.headshot-full img {
+  height: 90vh;
   width: 100%;
+}
+
+.hero-left {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.hero-left img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   display: block;
 }
 
+.hero-right {
+  flex: 1;
+  background-image: url('assets/stars.jpg'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  border-radius: 12px;
+  max-width: 600px;
+  margin-left: 40px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-overlay h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.about-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.social-icons a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: underline;
+}
