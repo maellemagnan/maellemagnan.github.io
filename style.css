@@ -113,6 +113,8 @@ a {
   color: #003f7d;
 }
 
+/* ===== Research page formatting ===== */
+
 .research-entry {
   display: flex;
   flex-direction: row;
@@ -120,8 +122,6 @@ a {
   align-items: flex-start;
   margin-top: 40px;
 }
-
-/* ===== Research page formatting ===== */
 
 .research-text {
   flex: 2;
