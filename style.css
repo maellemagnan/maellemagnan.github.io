@@ -129,3 +129,21 @@ a {
   margin-top: 0;
   align-self: flex-start;
 }
+
+/* ===== Image Gallery ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.gallery img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
