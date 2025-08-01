@@ -100,7 +100,7 @@ a {
 .button-link {
   display: inline-block;
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 6px; /* Match nav bar */
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
   color: #005fa3;
@@ -109,7 +109,6 @@ a {
 }
 
 .button-link:hover {
-  background-color: rgba(0, 95, 163, 0.1); /* light blue background */
-  color: #003f7d; /* slightly darker on hover */
+  background-color: rgba(0, 95, 163, 0.1); /* subtle blue fill */
+  color: #003f7d;
 }
-
