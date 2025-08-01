@@ -149,41 +149,34 @@ a {
 
 /* ===== Intro formatting ===== */
 
-.intro-section {
+
+.intro-split {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 80px;
-  background-color: #fff7e6; /* light cream */
-  position: relative;
-  z-index: 1;
-  margin: 50px;
+  min-height: 80vh;
+  margin: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-.headshot-wrapper {
-  flex: 0 0 250px;
-  margin-right: -50px;
-  z-index: 2;
+.headshot-full {
+  flex: 1;
+  max-width: 50%;
 }
 
-.headshot {
+.headshot-full img {
   width: 100%;
-  height: auto;
-  border-radius: 8px; /* soft corners, not a circle */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  position: relative;
-  top: -20px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .intro-text {
   flex: 1;
-  padding: 40px 60px;
-  background-color: #fffaf1; /* slightly different cream */
-  border-radius: 12px;
-  z-index: 1;
-  position: relative;
+  background-color: #fff7e6; /* cream */
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
