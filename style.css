@@ -54,7 +54,7 @@ body {
 /* ===== Main Content Box ===== */
 main {
   background-color: #e9ddc7;
-  max-width: 900px; /* or try 960px if you want slightly less */
+  max-width: 950px; /* or try 960px if you want slightly less */
   margin: 40px auto;
   padding: 10px 60px 60px 60px; 
   border-radius: 10px;
