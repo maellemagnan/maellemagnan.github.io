@@ -1,226 +1,16 @@
-/* ===== General ===== */
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #f0f0f0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  color: #1a1a1a;
-}
-
-/* ===== Navigation Bar ===== */
-
-.navbar {
-  background-color: #004c8c; 
-  padding: 24px 30px;
-  position: relative;
-  font-family: 'Playfair Display', serif;
-}
-
-.nav-brand {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1em;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-/* ===== Home Page Formatting ===== */
-.intro-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.headshot {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.intro-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-
-
-/* ===== Main Content Box ===== */
-main {
-  background-color: #e9ddc7;
-  max-width: 950px; /* or try 960px if you want slightly less */
-  margin: 40px auto;
-  padding: 10px 60px 60px 60px; 
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  line-height: 1.6;
-}
-
-/* ===== Section Titles ===== */
-main h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-
-/* ===== Links ===== */
-a {
-  color: #005fa3;
-  text-decoration: none;
-}
-
-
-/* ===== Image Gallery ===== */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.gallery img {
-  width: 280px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* ===== Button for links ===== */
-
-.button-link {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 6px; /* Match nav bar */
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: #005fa3;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.button-link:hover {
-  background-color: rgba(0, 95, 163, 0.1); /* subtle blue fill */
-  color: #003f7d;
-}
-
-/* ===== Research page formatting ===== */
-
-.research-content {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.research-text {
-  flex: 2;
-}
-
-.research-image img {
-  max-width: 280px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.research-project h2 {
-  margin-bottom: 10px;
-}
-
-.research-image {
-  margin-top: 0;
-  align-self: flex-start;
-}
-
-.intro-fun {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-}
-
-.headshot-wrapper {
-  background: radial-gradient(circle at center, #bcdffb, #e3f2fd);
-  border-radius: 50%;
-  padding: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.headshot-large {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.intro-card {
-  background-color: #fef8f3;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  max-width: 600px;
-}
-
-.intro-card h1 {
-  margin-top: 0;
-  font-size: 2.5rem;
-}
-
-.intro-card ul {
-  padding-left: 20px;
-}
-
-.intro-card a {
-  color: #005fa3;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.intro-card a:hover {
-  text-decoration: underline;
-}
+/* ===== General Layout & Fonts ===== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  display: flex;
+  display: flex; /* Enables sidebar + main content layout */
   min-height: 100vh;
   color: #333;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
 }
 
+
+/* ===== Sidebar ===== */
 .sidebar {
   background-color: #2ec4b6;
   color: white;
@@ -243,12 +33,20 @@ body {
 
 .sidebar h2 {
   margin: 10px 0 5px;
+  font-size: 1.4em;
 }
 
+.sidebar p {
+  font-size: 0.95em;
+  text-align: center;
+  margin: 0;
+}
+
+/* ===== Sidebar Navigation ===== */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -258,37 +56,80 @@ body {
   padding: 10px;
   border-radius: 6px;
   transition: background 0.2s;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
 }
 
 .sidebar-nav a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
+/* ===== Main Content ===== */
 .main-content {
-  margin-left: 260px;
-  padding: 40px;
+  margin-left: 260px; /* Leaves space for fixed sidebar */
+  padding: 60px 40px;
   flex: 1;
+  max-width: 800px;
 }
 
+.main-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.main-content p {
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+.main-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.main-content a {
+  color: #005fa3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== Responsive Layout (Mobile) ===== */
 @media (max-width: 768px) {
   .sidebar {
     position: relative;
     width: 100%;
     height: auto;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .sidebar-pic {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .sidebar h2, .sidebar p {
+    display: none; /* Hides text on smaller screens for space */
   }
 
   .main-content {
     margin-left: 0;
     padding: 20px;
   }
-
-  .sidebar-nav {
-    flex-direction: row;
-    gap: 10px;
-  }
 }
-
-
-
