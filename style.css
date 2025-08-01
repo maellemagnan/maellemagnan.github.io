@@ -115,29 +115,21 @@ a {
 
 /* ===== Research page formatting ===== */
 
-.research-flex {
+.research-content {
   display: flex;
   gap: 30px;
-  align-items: flex-start; /* aligns items at the top */
-  flex-wrap: wrap;
-  margin-top: 20px;
+  align-items: flex-start; /* Align tops */
+  flex-wrap: wrap;         /* Optional: allow stacking on small screens */
 }
 
 .research-text {
   flex: 2;
-  min-width: 300px;
-}
-
-.research-image {
-  flex: 1;
-  min-width: 250px;
-  align-self: flex-start; /* force image to align with top of text */
 }
 
 .research-image img {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
