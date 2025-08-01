@@ -118,7 +118,7 @@ a {
 .research-flex {
   display: flex;
   gap: 30px;
-  align-items: flex-start;
+  align-items: flex-start; /* aligns items at the top */
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -128,9 +128,16 @@ a {
   min-width: 300px;
 }
 
+.research-image {
+  flex: 1;
+  min-width: 250px;
+  align-self: flex-start; /* force image to align with top of text */
+}
+
 .research-image img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: block;
 }
