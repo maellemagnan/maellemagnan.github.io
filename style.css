@@ -118,8 +118,8 @@ a {
 .research-content {
   display: flex;
   gap: 30px;
-  align-items: flex-start; /* Align tops */
-  flex-wrap: wrap;         /* Optional: allow stacking on small screens */
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .research-text {
@@ -127,9 +127,10 @@ a {
 }
 
 .research-image img {
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
 
