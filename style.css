@@ -1,47 +1,131 @@
-/* ===== General Layout & Fonts ===== */
+/* ===== General ===== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  display: flex; /* Enables sidebar + main content layout */
-  min-height: 100vh;
-  color: #333;
   background-color: #f0f0f0;
   overflow-x: hidden;
-}
-
-
-/* ===== Main Content ===== */
-.main-content {
-  padding: 60px 40px;
-  flex: 1;
-  max-width: 800px;
-}
-
-.main-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2em;
-  margin-bottom: 20px;
   color: #1a1a1a;
 }
 
-.main-content p {
+/* ===== Navigation Bar ===== */
+.navbar {
+  background-color: #004c8c;
+  padding: 24px 30px;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Home Page Formatting ===== */
+.intro-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.headshot {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ===== Main Content Box ===== */
+main {
+  background-color: #e9ddc7;
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 10px 60px 60px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   line-height: 1.6;
-  font-size: 1.05em;
 }
 
-.main-content ul {
-  padding-left: 20px;
-  margin-top: 10px;
+/* ===== Section Titles ===== */
+main h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.main-content a {
+/* ===== Links ===== */
+a {
+  color: #005fa3;
+  text-decoration: none;
+}
+
+/* ===== Button for links ===== */
+.button-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
   color: #005fa3;
   font-weight: bold;
   text-decoration: none;
 }
 
-.main-content a:hover {
-  text-decoration: underline;
+.button-link:hover {
+  background-color: rgba(0, 95, 163, 0.1);
+  color: #003f7d;
 }
 
+/* ===== Research page formatting ===== */
+.research-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
+.research-text {
+  flex: 2;
+}
+
+.research-image img {
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.research-project h2 {
+  margin-bottom: 10px;
+}
+
+.research-image {
+  margin-top: 0;
+  align-self: flex-start;
+}
