@@ -10,64 +10,8 @@ body {
 }
 
 
-/* ===== Sidebar ===== */
-.sidebar {
-  background-color: #2ec4b6;
-  color: white;
-  width: 260px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  height: 100vh;
-}
-
-.sidebar-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.sidebar h2 {
-  margin: 10px 0 5px;
-  font-size: 1.4em;
-}
-
-.sidebar p {
-  font-size: 0.95em;
-  text-align: center;
-  margin: 0;
-}
-
-/* ===== Sidebar Navigation ===== */
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.sidebar-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 6px;
-  transition: background 0.2s;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-}
-
-.sidebar-nav a:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
 /* ===== Main Content ===== */
 .main-content {
-  margin-left: 260px; /* Leaves space for fixed sidebar */
   padding: 60px 40px;
   flex: 1;
   max-width: 800px;
@@ -101,35 +45,3 @@ body {
 }
 
 
-/* ===== Responsive Layout (Mobile) ===== */
-@media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-  }
-
-  .sidebar-pic {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0;
-  }
-
-  .sidebar-nav {
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 0;
-  }
-
-  .sidebar h2, .sidebar p {
-    display: none; /* Hides text on smaller screens for space */
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
