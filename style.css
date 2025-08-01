@@ -77,9 +77,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 /* ===== Image Gallery ===== */
 .gallery {
