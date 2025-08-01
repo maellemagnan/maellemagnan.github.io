@@ -147,3 +147,43 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== Intro formatting ===== */
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px;
+  background-color: #fff7e6; /* light cream */
+  position: relative;
+  z-index: 1;
+  margin: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.headshot-wrapper {
+  flex: 0 0 250px;
+  margin-right: -50px;
+  z-index: 2;
+}
+
+.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* soft corners, not a circle */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  top: -20px;
+}
+
+.intro-text {
+  flex: 1;
+  padding: 40px 60px;
+  background-color: #fffaf1; /* slightly different cream */
+  border-radius: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+
