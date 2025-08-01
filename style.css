@@ -213,5 +213,82 @@ a {
 .intro-card a:hover {
   text-decoration: underline;
 }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  color: #333;
+}
+
+.sidebar {
+  background-color: #2ec4b6;
+  color: white;
+  width: 260px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 {
+  margin: 10px 0 5px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sidebar-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
 
 
