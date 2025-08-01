@@ -112,3 +112,24 @@ a {
   background-color: rgba(0, 95, 163, 0.1); /* subtle blue fill */
   color: #003f7d;
 }
+
+.research-entry {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* ===== Research page formatting ===== */
+
+.research-text {
+  flex: 2;
+}
+
+.research-image img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
