@@ -133,4 +133,13 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+.research-project h2 {
+  margin-bottom: 10px;
+}
+
+.research-image {
+  margin-top: 0;
+  align-self: flex-start;
+}
+
 
