@@ -1,15 +1,20 @@
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;500&display=swap');
+
 /* ===== General ===== */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #f0f0f0;
   overflow-x: hidden;
   color: #1a1a1a;
+  line-height: 1.6;
 }
 
 body.home {
   background-color: #fff7e6;
 }
+
 /* ===== Navigation Bar ===== */
 .navbar {
   background-color: #004c8c;
@@ -41,8 +46,6 @@ body.home {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
 /* ===== Main Content Box ===== */
 main {
   background-color: #e9ddc7;
@@ -51,12 +54,10 @@ main {
   padding: 10px 60px 60px 60px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  line-height: 1.6;
 }
 
-/* ===== Section Titles ===== */
 main h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2em;
   margin-bottom: 20px;
   color: #333;
@@ -69,20 +70,23 @@ a {
 }
 
 /* ===== Button for links ===== */
-.button-link {
+.button-link,
+.about-button {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 10px 20px;
   border-radius: 6px;
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
   color: #005fa3;
   font-weight: bold;
   text-decoration: none;
+  border: 2px solid #005fa3;
 }
 
-.button-link:hover {
-  background-color: rgba(0, 95, 163, 0.1);
-  color: #003f7d;
+.button-link:hover,
+.about-button:hover {
+  background-color: #005fa3;
+  color: white;
 }
 
 /* ===== Research page formatting ===== */
@@ -106,6 +110,7 @@ a {
 
 .research-project h2 {
   margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
 }
 
 .research-image {
@@ -130,11 +135,10 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== Intro formatting ===== */
-
+/* ===== Intro/Home formatting ===== */
 .home-wrapper {
   position: relative;
-  background-color: #fff7e6; /* cream background */
+  background-color: #fff7e6;
   padding-bottom: 60px;
 }
 
@@ -151,6 +155,7 @@ a {
   object-fit: contain;
   display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
 /* Star banner */
@@ -177,7 +182,7 @@ a {
 /* Cream content section */
 .intro-section {
   padding: 40px 40px 0 550px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .intro-section h2 {
@@ -185,30 +190,12 @@ a {
   font-weight: 500;
   margin-bottom: 16px;
   color: #1a1a1a;
-  font-family: 'Playfair Display', serif;
-
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .intro-section p {
   font-size: 1rem;
   color: #1a1a1a;
   margin-bottom: 24px;
-  font-family: 'Playfair Display', serif;
-
-}
-
-.about-button {
-  padding: 10px 20px;
-  border: 2px solid #005fa3;
-  color: #005fa3;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  background: transparent;
-  transition: 0.3s;
-}
-
-.about-button:hover {
-  background-color: #005fa3;
-  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
 }
