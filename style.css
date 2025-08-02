@@ -16,6 +16,12 @@ body.home {
   background-color: #e9ddc7;
 }
 
+section {
+  padding: 80px 20px;
+  margin-bottom: 60px; /* adds space between sections */
+  border-top: 1px solid #ccc; /* light separator line */
+}
+
 /* ===== Navigation Bar ===== */
 .navbar {
   background-color: #004c8c;
