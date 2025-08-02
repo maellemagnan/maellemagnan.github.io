@@ -71,24 +71,42 @@ a {
 }
 
 /* ===== Button for links ===== */
-.button-link,
+/* Homepage About button */
 .about-button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 6px;
   background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
   color: #005fa3;
   font-weight: bold;
   text-decoration: none;
   border: 2px solid #005fa3;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button-link:hover,
 .about-button:hover {
   background-color: #005fa3;
   color: white;
 }
+
+/* Default button links for other pages */
+.button-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #005fa3;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: rgba(0, 95, 163, 0.1);
+  color: #003f7d;
+}
+
 
 /* ===== Research page formatting ===== */
 .research-content {
