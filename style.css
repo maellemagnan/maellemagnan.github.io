@@ -7,6 +7,9 @@ body {
   color: #1a1a1a;
 }
 
+body.home {
+  background-color: #fff7e6;
+}
 /* ===== Navigation Bar ===== */
 .navbar {
   background-color: #004c8c;
