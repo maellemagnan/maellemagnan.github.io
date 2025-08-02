@@ -134,64 +134,64 @@ a {
 
 .home-wrapper {
   position: relative;
-  margin-top: 0;
+  background-color: #fff7e6; /* cream background */
+  padding-bottom: 60px;
 }
 
-/* Star strip under navbar */
-.star-strip {
-  height: 350px;
-  background-image: url('assets/quasar.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* Cutout-style floating headshot */
+/* Headshot position */
 .floating-headshot {
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 60px;
   z-index: 2;
 }
 
 .floating-headshot img {
-  height: 500px;
-  width: auto;
+  height: 480px;
   object-fit: contain;
   display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
-/* Cream box overlapping star strip and body */
-.intro-box {
+/* Star banner */
+.star-strip {
+  background-image: url('assets/stars.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 40px 20px 440px;
   position: relative;
-  z-index: 3;
-  background-color: #fff7e6;
-  max-width: 620px;
-  margin: -120px auto 60px 440px; 
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-.intro-box h1 {
+/* Welcome heading on star banner */
+.hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  color: white;
+  margin: 0;
+}
+
+/* Cream content section */
+.intro-section {
+  padding: 40px 40px 0 440px;
+  font-family: 'Inter', sans-serif;
+}
+
+.intro-section h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 16px;
   color: #1a1a1a;
 }
 
-.intro-box h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 20px;
+.intro-section p {
+  font-size: 1rem;
   color: #1a1a1a;
-}
-
-.intro-box p {
-  color: #1a1a1a;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about-button {
