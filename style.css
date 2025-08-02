@@ -18,8 +18,10 @@ body.home {
 /* ===== Navigation Bar ===== */
 .navbar {
   background-color: #004c8c;
-  padding: 24px 30px;
-  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
   font-family: 'Playfair Display', serif;
 }
 
