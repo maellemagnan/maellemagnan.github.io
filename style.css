@@ -135,29 +135,45 @@ a {
 }
 
 /* Star banner */
+./* Adjusted star banner */
 .star-strip {
   background-image: url('assets/stars.jpg');
   background-size: cover;
   background-position: center;
-  height: 240px;
+  height: 220px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-/* Floating headshot */
+/* Adjusted headshot position */
 .floating-headshot {
   position: absolute;
-  top: 40px; /* adjust to sit below navbar */
+  top: 140px;  /* lower so it aligns with intro-box */
   left: 60px;
   z-index: 2;
 }
 
 .floating-headshot img {
-  height: 500px;
+  height: 480px;
   width: auto;
-  display: block;
   object-fit: contain;
+  display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Cream text box */
+.intro-box {
+  background-color: #fff7e6;
+  max-width: 600px;
+  padding: 40px;
+  margin: -80px auto 60px auto; /* pulls it over star strip */
+  position: relative;
+  z-index: 3;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Cream text box floating over star strip */
 .intro-box {
