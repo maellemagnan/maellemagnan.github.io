@@ -101,7 +101,23 @@
 
   <!-- ===== CV Section ===== -->
   <section id="cv">
-    <!-- Paste your current cv.html content here -->
+    <main>
+    <h1>Curriculum Vitae</h1>
+
+    <p>You can download my CV <a href="assets/Maëlle_Magnan_CV_2025.pdf" download class="button-link">here</a>.</p>
+
+    <p>Or open it directly in your browser window below:</p>
+
+    <iframe src="assets/Maëlle_Magnan_CV_2025.pdf" width="100%" height="600px" style="border: none;"></iframe>
+
+    <p id="last-updated"><em>Last updated: </em></p>
+
+    <script>
+      const lastUpdated = new Date(document.lastModified);
+      document.getElementById("last-updated").innerHTML = `<em>Last updated: ${lastUpdated.toDateString()}</em>`;
+    </script>
+
+  </main>
   </section>
 
   <!-- ===== Contact Section ===== -->
