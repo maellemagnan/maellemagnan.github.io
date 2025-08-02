@@ -158,7 +158,6 @@ a {
   object-fit: contain;
   display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
 }
 
 /* Cream box overlapping star strip and body */
@@ -169,7 +168,6 @@ a {
   max-width: 620px;
   margin: -120px auto 60px 440px; /* pulls it over star strip */
   padding: 40px;
-  border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -181,6 +179,7 @@ a {
 }
 
 .intro-box h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 400;
   margin-bottom: 20px;
