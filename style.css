@@ -149,63 +149,61 @@ a {
 
 /* ===== Intro formatting ===== */
 
-
-.hero-section {
-  display: flex;
-  height: 90vh;
-  width: 100%;
-}
-
-.hero-left {
-  width: 400px;
-  flex-shrink: 0;
-}
-
-.hero-left img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-right {
-  flex: 1;
-  background-image: url('assets/stars.jpg'); 
+.hero-banner {
+  background-image: url('assets/stars.jpg'); /* your starry image */
   background-size: cover;
   background-position: center;
-  position: relative;
+  padding: 80px 40px;
   color: white;
   display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
   align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
 }
 
-.hero-overlay {
-  padding: 60px;
-  background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
-  border-radius: 12px;
+.hero-image img {
+  height: 420px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-text {
   max-width: 600px;
-  margin-left: 40px;
+  background: rgba(0, 0, 0, 0.5); /* optional overlay */
+  padding: 40px;
+  border-radius: 12px;
 }
 
-.hero-overlay h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
+.hero-text h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
 }
 
-.hero-overlay h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.hero-text h2 {
+  font-size: 1.4rem;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-text a {
+  color: white;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
 .about-button {
-  display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px;
-  background: transparent;
-  color: white;
+  padding: 10px 20px;
   border: 2px solid white;
+  color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -215,10 +213,4 @@ a {
 .about-button:hover {
   background-color: white;
   color: black;
-}
-
-.social-icons a {
-  margin-right: 20px;
-  color: white;
-  text-decoration: underline;
 }
