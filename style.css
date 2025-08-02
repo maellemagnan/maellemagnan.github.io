@@ -129,58 +129,61 @@ a {
 
 /* ===== Intro formatting ===== */
 
-/* Headshot floated over everything */
+.home-wrapper {
+  position: relative;
+  padding-top: 60px;
+}
+
+/* Star banner */
+.star-strip {
+  background-image: url('assets/stars.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  width: 100%;
+}
+
+/* Floating headshot */
 .floating-headshot {
   position: absolute;
-  top: 100px; /* adjust to sit under navbar */
+  top: 40px; /* adjust to sit below navbar */
   left: 60px;
   z-index: 2;
 }
 
 .floating-headshot img {
   height: 500px;
-  object-fit: contain;
+  width: auto;
   display: block;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Star strip */
-.star-strip {
-  background-image: url('assets/ngc-1300.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px; /* shorter strip */
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 40px 0 500px; /* push text to the right */
-}
-
-/* Text box sitting half in stars, half off */
-.text-box {
-  background-color: #fff7e6; /* cream */
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: -80px; /* pulls box down over white space */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* Cream text box floating over star strip */
+.intro-box {
+  background-color: #fff7e6;
   max-width: 600px;
+  padding: 40px;
+  margin: -100px auto 60px auto; /* pull over star banner */
+  position: relative;
+  z-index: 3;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.text-box h1 {
-  font-family: 'Playfair Display', serif;
+.intro-box h1 {
   font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
-  color: #333;
 }
 
-.text-box h2 {
+.intro-box h2 {
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.text-box a {
+.intro-box a {
   color: #005fa3;
   text-decoration: underline;
   display: inline-block;
