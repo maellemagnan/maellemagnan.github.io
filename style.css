@@ -137,7 +137,7 @@ a {
 /* Star strip under navbar */
 .star-strip {
   height: 260px;
-  background-image: url('assets/stars.jpg');
+  background-image: url('assets/quasar.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
