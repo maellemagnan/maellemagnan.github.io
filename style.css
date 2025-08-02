@@ -145,7 +145,7 @@ a {
 
 /* Star strip */
 .star-strip {
-  background-image: url('assets/stars.jpg');
+  background-image: url('assets/ngc-1300.jpg');
   background-size: cover;
   background-position: center;
   height: 300px; /* shorter strip */
