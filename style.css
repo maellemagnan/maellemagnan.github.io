@@ -131,25 +131,23 @@ a {
 
 .home-wrapper {
   position: relative;
-  padding-top: 60px;
+  margin-top: 0;
 }
 
-/* Star banner */
-./* Adjusted star banner */
+/* Star strip under navbar */
 .star-strip {
+  height: 260px;
   background-image: url('assets/stars.jpg');
   background-size: cover;
   background-position: center;
-  height: 220px;
-  width: 100%;
   position: relative;
   z-index: 1;
 }
 
-/* Adjusted headshot position */
+/* Cutout-style floating headshot */
 .floating-headshot {
   position: absolute;
-  top: 140px;  /* lower so it aligns with intro-box */
+  top: 100px;
   left: 60px;
   z-index: 2;
 }
@@ -159,63 +157,50 @@ a {
   width: auto;
   object-fit: contain;
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
-/* Cream text box */
+/* Cream box overlapping star strip and body */
 .intro-box {
-  background-color: #fff7e6;
-  max-width: 600px;
-  padding: 40px;
-  margin: -80px auto 60px auto; /* pulls it over star strip */
   position: relative;
   z-index: 3;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Cream text box floating over star strip */
-.intro-box {
   background-color: #fff7e6;
-  max-width: 600px;
+  max-width: 620px;
+  margin: -120px auto 60px 440px; /* pulls it over star strip */
   padding: 40px;
-  margin: -100px auto 60px auto; /* pull over star banner */
-  position: relative;
-  z-index: 3;
   border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .intro-box h1 {
-  font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
 .intro-box h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.intro-box p {
+  color: #1a1a1a;
   margin-bottom: 20px;
 }
 
-.intro-box a {
-  color: #005fa3;
-  text-decoration: underline;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
 .about-button {
-  margin-top: 20px;
   padding: 10px 20px;
   border: 2px solid #005fa3;
   color: #005fa3;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: 0.3s;
   background: transparent;
+  transition: 0.3s;
 }
 
 .about-button:hover {
