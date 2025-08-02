@@ -170,6 +170,7 @@ a {
 .hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
+  padding: 40px 40px 0 550px;
   color: white;
   margin: 0;
 }
@@ -177,7 +178,7 @@ a {
 /* Cream content section */
 .intro-section {
   padding: 40px 40px 0 550px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .intro-section h2 {
@@ -185,12 +186,16 @@ a {
   font-weight: 500;
   margin-bottom: 16px;
   color: #1a1a1a;
+  font-family: 'Playfair Display', serif;
+
 }
 
 .intro-section p {
   font-size: 1rem;
   color: #1a1a1a;
   margin-bottom: 24px;
+  font-family: 'Playfair Display', serif;
+
 }
 
 .about-button {
