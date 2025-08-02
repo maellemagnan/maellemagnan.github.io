@@ -4,12 +4,13 @@
 /* ===== General ===== */
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: Georgia, serif;
   background-color: #f0f0f0;
   overflow-x: hidden;
   color: #1a1a1a;
   line-height: 1.6;
 }
+
 
 body.home {
   background-color: #fff7e6;
@@ -182,7 +183,6 @@ a {
 /* Cream content section */
 .intro-section {
   padding: 40px 40px 0 550px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .intro-section h2 {
@@ -190,12 +190,10 @@ a {
   font-weight: 500;
   margin-bottom: 16px;
   color: #1a1a1a;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .intro-section p {
   font-size: 1rem;
   color: #1a1a1a;
   margin-bottom: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
