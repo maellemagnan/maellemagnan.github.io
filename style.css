@@ -102,9 +102,10 @@ a {
 }
 
 .button-link:hover {
-  background-color: rgba(0, 63, 125, 0.1); 
-  color: #003f7d; 
+  background-color: #d2dce7; 
+  color: #003f7d;
 }
+
 
 
 /* ===== Research page formatting ===== */
@@ -156,7 +157,6 @@ a {
 /* ===== Intro/Home formatting ===== */
 .home-wrapper {
   position: relative;
-  background-color:  #e9ddc7;
 }
 
 /* Headshot position */
