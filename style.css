@@ -23,6 +23,10 @@ body {
   overflow-x: hidden;
 }
 
+body.home {
+  background-color: #e9ddc7;
+}
+
 /* ===== Navigation Bar ===== */
 .navbar {
   position: fixed;
@@ -57,20 +61,19 @@ body {
 
 /* ===== Full-bleed Star Strip ===== */
 .star-strip {
-  margin: -40px 0 0;             /* pulls it up under the navbar */
+  margin: -40px 0 0;             /* pulls it under the nav */
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; transform: translateX(-50%);
   width: 100vw;
-  height: 320px;                 /* thicker strip */
+  height: 320px;                 /* thick strip */
   background: url('assets/quasar.jpg') center/cover no-repeat;
   display: flex;
-  align-items: flex-end;         /* push heading to bottom */
+  align-items: flex-end;         /* pushes heading down */
 }
 
 .hero-heading {
-  margin: 0 0 20px 0;            /* bottom spacing */
-  padding-left: 550px;           /* align with intro */
+  margin: 0 0 20px 0;            /* bottom gap */
+  padding-left: 550px;           /* lines up with intro */
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: #fff;
@@ -81,10 +84,10 @@ body {
 main {
   max-width: 1000px;
   margin: 40px auto;
-  padding: 0 60px 60px;
+  padding: 0 30px 60px;          /* tightened side padding */
 }
 
-/* remove “bubble” panels */
+/* remove “bubbles” */
 main,
 .intro-section,
 .research-project,
@@ -101,6 +104,16 @@ section {
 section + section {
   border-top: 4px solid rgba(0,0,0,0.15);
   box-shadow: inset 0 8px 16px rgba(0,0,0,0.05);
+}
+
+/* ===== About Section Adjustments ===== */
+#about h1 {
+  margin-bottom: 24px;           /* space title from text */
+}
+
+#about p {
+  max-width: 800px;              /* ideal line length */
+  margin: 0 auto 1.2em;
 }
 
 /* ===== Intro/Home Formatting ===== */
@@ -123,7 +136,7 @@ section + section {
 }
 
 .intro-section {
-  padding: 40px 40px 0 550px;
+  padding: 40px 40px 0 550px;    /* aligns under hero-heading */
 }
 
 .intro-section h2 {
