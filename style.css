@@ -9,7 +9,7 @@ body, html {
 
 body {
   font-family: Georgia, serif;
-  background-color: #f0f0f0;
+  background-color: #e9ddc7; /* unified cream background */
   overflow-x: hidden;
   color: #1a1a1a;
   line-height: 1.6;
@@ -177,13 +177,14 @@ a {
   background-image: url('assets/quasar.jpg');
   background-size: cover;
   background-position: center;
+  width: 100%; /* full width */
   height: 260px;
   display: flex;
   align-items: flex-end;
   padding: 40px 40px 20px 550px;
   position: relative;
   z-index: 1;
-  margin-top: 72px; /* Push below fixed navbar height */
+  margin-top: 72px; /* below fixed navbar */
 }
 
 .hero-heading {
@@ -210,31 +211,10 @@ a {
   margin-bottom: 24px;
 }
 
-/* ===== Section Backgrounds & Dividers ===== */
+/* ===== Section Styling ===== */
 section {
   padding: 80px 20px;
-}
-
-#home {
-  background: none;
-  color: white;
-  padding-top: 0;
-}
-
-#about {
-  background-color: #f5efe0;
-}
-
-#research {
-  background-color: #e6f0fa;
-}
-
-#cv {
-  background-color: #f9e6e6;
-}
-
-#contact {
-  background-color: #eef6e6;
+  background-color: #e9ddc7; /* unified cream background */
 }
 
 section + section {
