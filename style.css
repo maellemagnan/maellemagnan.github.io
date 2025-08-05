@@ -183,7 +183,7 @@ a {
   height: 260px;
   display: flex;
   align-items: flex-end;
-  padding: 100px 40px;
+  padding: 20px 40px;
   position: relative;
   margin: 0; /* removes any default gaps */
   border: none;
