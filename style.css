@@ -173,7 +173,7 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-..star-strip {
+.star-strip {
   background-image: url('assets/quasar.jpg');
   background-size: cover;
   background-position: center;
@@ -181,10 +181,10 @@ a {
   height: 260px;
   display: flex;
   align-items: flex-end;
-  padding: 120px 40px 20px 550px; /* 120px pushes text down under navbar */
+  padding: 100px 40px 20px 550px; /* adjusts text position */
   position: relative;
   z-index: 1;
-  margin-top: 0; /* no gap above */
+  margin-top: 0;
 }
 
 
