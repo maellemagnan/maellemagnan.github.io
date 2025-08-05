@@ -183,19 +183,18 @@ a {
   height: 260px;
   display: flex;
   align-items: flex-end;
-  padding: 20px 40px;
+  padding: 100px 40px;
   position: relative;
   margin: 0; /* removes any default gaps */
   border: none;
 }
 
-/* Align hero-heading with intro-section text */
 .hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: white;
   margin: 0;
-  padding-left: 550px; /* matches .intro-section padding */
+  padding-left: 500px; /* matches .intro-section padding */
   line-height: 1.2;
 }
 
