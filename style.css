@@ -174,31 +174,28 @@ a {
 }
 
 .star-strip {
-  /* no inner spacing or extra margins */
-  margin: 0;
+  margin: -10;
   padding: 0;
-
-  /* full‐bleed across the viewport */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-
-  /* height and background */
-  height: 260px;
+  height: 300px; /* up from 260px to make it thicker */
   background: url('assets/quasar.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
 }
-
-
+}
 
 .hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: white;
-  margin: 0;
-  padding-left: 500px; /* matches .intro-section padding */
+  margin: 0 0 20px 0;   /* top 0, right 0, bottom 20px, left 0 */
+  padding-left: 550px;  /* keeps it aligned under intro text */
   line-height: 1.2;
 }
+
 
 
 .intro-section {
