@@ -174,27 +174,21 @@ a {
 }
 
 .star-strip {
-  /* pull up to sit flush under the fixed navbar */
-  margin-top: -40px;
+  /* no inner spacing or extra margins */
+  margin: 0;
+  padding: 0;
 
-  /* top 20px, right 40px, bottom 20px, left 550px to match your intro text */
-  padding: 20px 40px 20px 550px;
+  /* full‐bleed across the viewport */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
 
-  /* full-width background */
-  width: 100%;
+  /* height and background */
   height: 260px;
-  background-image: url('assets/quasar.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  /* align the heading to the bottom */
-  display: flex;
-  align-items: flex-end;
-
-  /* include padding in the box model */
-  box-sizing: border-box;
+  background: url('assets/quasar.jpg') center/cover no-repeat;
 }
+
 
 
 .hero-heading {
