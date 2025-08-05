@@ -174,7 +174,7 @@ a {
 }
 
 .star-strip {
-  margin: -40px 0 0;            /* pulls it up under the fixed nav (nav was 40px high) */
+  margin: -10px 0 0;            /* pulls it up under the fixed nav (nav was 40px high) */
   padding: 0;                   /* no inner gaps */
   position: relative;
   left: 50%;
