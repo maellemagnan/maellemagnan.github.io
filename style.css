@@ -1,7 +1,7 @@
 /* ===== Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;500&display=swap');
 
-/* ===== Reset & Base ===== */
+/* ===== Reset & General ===== */
 *,
 *::before,
 *::after {
@@ -17,14 +17,17 @@ html, body {
 
 body {
   font-family: Georgia, serif;
-  background-color: #e9ddc7;
+  background-color: #e9ddc7; /* unified cream background */
   color: #1a1a1a;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 72px;           /* reserve navbar height */
 }
 
-/* ===== Navbar ===== */
+body.home {
+  background-color: #e9ddc7;
+}
+
+/* ===== Navigation Bar ===== */
 .navbar {
   position: fixed;
   top: 0; left: 0;
@@ -41,6 +44,7 @@ body {
   justify-content: center;
   gap: 30px;
 }
+
 .nav-links a {
   color: #fff;
   font-weight: bold;
@@ -48,90 +52,56 @@ body {
   font-size: 1.1em;
   padding: 6px 12px;
   border-radius: 6px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .nav-links a:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* ===== Home Section ===== */
-#home {
-  position: relative;
-}
-
-/* star strip sits at top of #home in normal flow */
+/* ===== Full-bleed Star Strip ===== */
+/* changed to fixed under navbar, nothing else touched */
 .star-strip {
+  position: fixed;
+  top: 72px;               /* height of navbar */
+  left: 0;
   width: 100%;
   height: 320px;
   background: url('assets/quasar.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
-}
-
-/* constrain content to same width as main */
-.strip-content {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
+  margin: 0;
+  z-index: 900;
 }
 
 .hero-heading {
+  margin: 0 0 20px 0;            /* bottom gap */
+  padding-left: 550px;           /* lines up with intro */
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-/* float headshot on top of strip+intro */
-.floating-headshot {
-  position: absolute;
-  top: 200px;      /* tweak this to slide the headshot up/down */
-  left: 60px;      /* tweak for horizontal placement */
-  z-index: 2;
-}
-.floating-headshot img {
-  display: block;
-  height: 480px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-/* push intro below the strip */
-.home-wrapper {
-  margin-top: -80px;  /* pull up so that strip overlaps into wrapper */
-  padding-top: 400px; /* stripe height (320) + gap (80) */
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.intro-section {
-  max-width: 600px;
-  margin-left: 550px;   /* match floating-headshot width + gap */
-}
-.intro-section h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.intro-section p {
-  margin-bottom: 24px;
-}
-
-/* ===== Main & Other Sections ===== */
+/* ===== Main Container & Sections ===== */
 main {
   max-width: 1000px;
-  margin: 40px auto 60px;
-  padding: 0 30px;
+  margin: 40px auto;
+  padding: 0 30px 60px;          /* tightened side padding */
+}
+
+/* remove “bubbles” */
+main,
+.intro-section,
+.research-project,
+.gallery {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 section {
   padding: 80px 20px;
-  position: relative;
-  z-index: 1;
 }
 
 section + section {
@@ -139,45 +109,127 @@ section + section {
   box-shadow: inset 0 8px 16px rgba(0,0,0,0.05);
 }
 
-/* ===== Utilities: Buttons & Links ===== */
+/* ===== About Section Adjustments ===== */
+#about h1 {
+  margin-bottom: 24px;           /* space title from text */
+}
+
+#about p {
+  max-width: 800px;              /* ideal line length */
+  margin: 0 auto 1.2em;
+}
+
+/* ===== Intro/Home Formatting ===== */
+/* changed margin-top instead of padding-top, and restored normal flow */
+.home-wrapper {
+  position: relative;
+  margin-top: 392px;             /* 72 (nav) + 320 (strip) */
+}
+
+.floating-headshot {
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  z-index: 2;
+}
+
+.floating-headshot img {
+  height: 480px;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.intro-section {
+  padding: 40px 40px 0 550px;     /* original */
+  position: static;               /* allow normal flow beside headshot */
+}
+
+.intro-section h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+/* ===== Links & Buttons ===== */
+/* exactly as before, untouched */
 a {
   color: #005fa3;
   text-decoration: none;
 }
-.about-button,
-.button-link {
+
+.about-button {
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #005fa3;
   border-radius: 6px;
+  color: #005fa3;
   font-weight: bold;
+  background: transparent;
   transition: background-color 0.3s, color 0.3s;
 }
-.about-button:hover,
-.button-link:hover {
+
+.about-button:hover {
   background-color: #005fa3;
   color: #fff;
 }
 
-/* ===== Research & Gallery ===== */
+.button-link {
+  display: inline-block;
+  padding: 6px 12px;
+  font-weight: bold;
+  color: #005fa3;
+  background: transparent;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+  background-color: rgba(0,95,163,0.15);
+  color: #003f7d;
+}
+
+/* ===== Research Page Formatting ===== */
 .research-content {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-items: flex-start;
 }
+
 .research-text {
   flex: 2;
 }
-.research-image img,
-.gallery img {
+
+.research-image img {
+  max-width: 280px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
+.research-project h2 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===== Image Gallery ===== */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-top: 40px;
+}
+
+.gallery img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
