@@ -17,10 +17,11 @@ html, body {
 
 body {
   font-family: Georgia, serif;
-  background-color: #e9ddc7; /* unified cream background */
+  background-color: #e9ddc7;   /* unified cream background */
   color: #1a1a1a;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 72px;           /* reserve space for fixed navbar */
 }
 
 body.home {
@@ -30,7 +31,8 @@ body.home {
 /* ===== Navigation Bar ===== */
 .navbar {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 24px 30px;
   background-color: #004c8c;
@@ -59,32 +61,44 @@ body.home {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* ===== Full-bleed Star Strip ===== */
+/* ===== Full-bleed Star Strip (fixed position) ===== */
 .star-strip {
-  margin: -40px 0 0;             /* pulls it under the nav */
-  position: relative;
-  left: 50%; transform: translateX(-50%);
-  width: 100vw;
-  height: 320px;                 /* thick strip */
+  position: fixed;
+  top: 72px;                   /* sits just below the navbar */
+  left: 0;
+  width: 100%;
+  height: 320px;               /* height of your strip */
   background: url('assets/quasar.jpg') center/cover no-repeat;
+  z-index: 900;
   display: flex;
-  align-items: flex-end;         /* pushes heading down */
+  align-items: flex-end;       /* pushes heading to bottom of strip */
 }
 
 .hero-heading {
-  margin: 0 0 20px 0;            /* bottom gap */
-  padding-left: 550px;           /* lines up with intro */
+  margin: 0 0 20px 0;
+  padding-left: 550px;         /* lines up with intro content */
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: #fff;
   line-height: 1.2;
 }
 
+/* ===== Home Wrapper ===== */
+/* push everything below the fixed strip */
+.home-wrapper {
+  position: relative;
+  padding-top: 400px;          /* navbar (72px) + strip (320px) + buffer */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 /* ===== Main Container & Sections ===== */
 main {
   max-width: 1000px;
   margin: 40px auto;
-  padding: 0 30px 60px;          /* tightened side padding */
+  padding: 0 30px 60px;
 }
 
 /* remove “bubbles” */
@@ -108,19 +122,15 @@ section + section {
 
 /* ===== About Section Adjustments ===== */
 #about h1 {
-  margin-bottom: 24px;           /* space title from text */
+  margin-bottom: 24px;
 }
 
 #about p {
-  max-width: 800px;              /* ideal line length */
+  max-width: 800px;
   margin: 0 auto 1.2em;
 }
 
 /* ===== Intro/Home Formatting ===== */
-.home-wrapper {
-  position: relative;
-}
-
 .floating-headshot {
   position: absolute;
   top: 150px;
@@ -136,7 +146,7 @@ section + section {
 }
 
 .intro-section {
-  padding: 40px 40px 0 550px;    /* aligns under hero-heading */
+  padding: 40px 40px 0 550px;   /* aligns under hero-heading */
 }
 
 .intro-section h2 {
@@ -178,7 +188,6 @@ a {
   font-weight: bold;
   color: #005fa3;
   background: transparent;
-  text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
