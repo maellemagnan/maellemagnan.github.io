@@ -17,36 +17,29 @@ html, body {
 
 body {
   font-family: Georgia, serif;
-  background-color: #e9ddc7;   /* unified cream background */
+  background-color: #e9ddc7;
   color: #1a1a1a;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 72px;           /* reserve space for fixed navbar */
-}
-
-body.home {
-  background-color: #e9ddc7;
+  padding-top: 72px;          /* reserve space for navbar */
 }
 
 /* ===== Navigation Bar ===== */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   padding: 24px 30px;
   background-color: #004c8c;
   z-index: 1000;
   font-family: 'Playfair Display', serif;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-
 .nav-links a {
   color: #fff;
   font-weight: bold;
@@ -54,118 +47,109 @@ body.home {
   font-size: 1.1em;
   padding: 6px 12px;
   border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
 }
-
 .nav-links a:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* ===== Full-bleed Star Strip (fixed position) ===== */
+/* ===== Star Strip (normal flow) ===== */
 .star-strip {
-  position: fixed;
-  top: 72px;                   /* sits just below the navbar */
-  left: 0;
+  position: relative;         /* scrolls normally */
+  z-index: 0;                 /* behind content */
+  margin-top: -40px;          /* pull under navbar if needed */
   width: 100%;
-  height: 320px;               /* height of your strip */
+  height: 320px;
   background: url('assets/quasar.jpg') center/cover no-repeat;
-  z-index: 900;
   display: flex;
-  align-items: flex-end;       /* pushes heading to bottom of strip */
+  align-items: flex-end;
 }
-
+.strip-content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 .hero-heading {
-  margin: 0 0 20px 0;
-  padding-left: 550px;         /* lines up with intro content */
+  margin-bottom: 20px;
+  padding: 0;
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: #fff;
   line-height: 1.2;
+  text-align: left;
+}
+
+/* ensure content sits above strip */
+.home-wrapper,
+main,
+section {
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== Home Wrapper ===== */
-/* push everything below the fixed strip */
 .home-wrapper {
-  position: relative;
-  padding-top: 400px;          /* navbar (72px) + strip (320px) + buffer */
+  padding-top: 400px;         /* navbar + strip + gap */
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* ===== Main Container & Sections ===== */
+/* ===== Main & Sections ===== */
 main {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 30px 60px;
 }
-
-/* remove “bubbles” */
-main,
-.intro-section,
-.research-project,
-.gallery {
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-}
-
 section {
   padding: 80px 20px;
 }
-
 section + section {
   border-top: 4px solid rgba(0,0,0,0.15);
   box-shadow: inset 0 8px 16px rgba(0,0,0,0.05);
 }
 
-/* ===== About Section Adjustments ===== */
+/* ===== About ===== */
 #about h1 {
   margin-bottom: 24px;
 }
-
 #about p {
   max-width: 800px;
   margin: 0 auto 1.2em;
 }
 
-/* ===== Intro/Home Formatting ===== */
+/* ===== Intro ===== */
 .floating-headshot {
   position: absolute;
   top: 150px;
   left: 60px;
   z-index: 2;
 }
-
 .floating-headshot img {
   height: 480px;
   object-fit: contain;
-  display: block;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
-
 .intro-section {
-  padding: 40px 40px 0 550px;   /* aligns under hero-heading */
+  padding: 40px 40px 0 550px;
 }
-
 .intro-section h2 {
   font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 16px;
 }
-
 .intro-section p {
   font-size: 1rem;
   margin-bottom: 24px;
 }
 
-/* ===== Links & Buttons ===== */
+/* ===== Buttons & Links ===== */
 a {
   color: #005fa3;
   text-decoration: none;
 }
-
 .about-button {
   display: inline-block;
   padding: 10px 20px;
@@ -173,54 +157,45 @@ a {
   border-radius: 6px;
   color: #005fa3;
   font-weight: bold;
-  background: transparent;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .about-button:hover {
   background-color: #005fa3;
   color: #fff;
 }
-
 .button-link {
   display: inline-block;
   padding: 6px 12px;
   font-weight: bold;
   color: #005fa3;
-  background: transparent;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .button-link:hover {
   background-color: rgba(0,95,163,0.15);
   color: #003f7d;
 }
 
-/* ===== Research Page Formatting ===== */
+/* ===== Research ===== */
 .research-content {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-items: flex-start;
 }
-
 .research-text {
   flex: 2;
 }
-
 .research-image img {
   max-width: 280px;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-
 .research-project h2 {
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
 }
 
-/* ===== Image Gallery ===== */
+/* ===== Gallery ===== */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -228,11 +203,8 @@ a {
   justify-content: center;
   margin-top: 40px;
 }
-
 .gallery img {
   width: 280px;
-  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-
