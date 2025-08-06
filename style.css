@@ -271,3 +271,8 @@ section p {
   height: auto;
   object-fit: cover;
 }
+
+section p {
+  margin-left: 2em;
+  max-width: calc(100% - 2em);
+}
