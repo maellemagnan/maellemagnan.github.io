@@ -60,18 +60,21 @@ body.home {
 }
 
 /* ===== Full-bleed Star Strip ===== */
-/* changed to fixed under navbar, nothing else touched */
 .star-strip {
-  position: fixed;
-  top: 72px;               /* height of navbar */
-  left: 0;
-  width: 100%;
+  position: relative !important;
+  top: auto !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   height: 320px;
-  background: url('assets/quasar.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  margin: 0;
-  z-index: 900;
+  margin: -40px 0 0;
+  z-index: 0 !important;
+}
+
+.home-wrapper {
+  position: relative;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .hero-heading {
@@ -121,10 +124,7 @@ section + section {
 
 /* ===== Intro/Home Formatting ===== */
 /* changed margin-top instead of padding-top, and restored normal flow */
-.home-wrapper {
-  position: relative;
-  margin-top: 392px;             /* 72 (nav) + 320 (strip) */
-}
+
 
 .floating-headshot {
   position: absolute;
