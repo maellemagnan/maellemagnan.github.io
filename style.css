@@ -257,19 +257,16 @@ section p {
 }
 
 
-/* make the three About‐section photos span the full content width */
+/* at the very end of your CSS */
 #about .gallery {
   display: flex;
-  gap: 20px;
-  max-width: 1000px;    /* same as your main container */
-  margin: 40px auto 0;  /* center it and give a little top spacing */
+  gap: 20px;               /* space between images */
+  max-width: 1000px;       /* same as your main container */
+  margin: 40px auto 0;     /* center & add top spacing */
 }
 
 #about .gallery img {
-  flex: 1;              /* each image takes equal share */
-  width: 100%;          /* fill its flex slot */
+  flex: 0 0 calc((100% - 40px) / 3);  /* three images minus total gap */
   height: auto;
-  object-fit: cover;    /* preserve aspect ratio, crop if needed */
+  object-fit: cover;
 }
-
-
