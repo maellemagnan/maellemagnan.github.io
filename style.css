@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;500&display=swap');
 
 /* ===== Reset & General ===== */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -101,10 +99,7 @@ main {
 }
 
 /* remove “bubbles” */
-main,
-.intro-section,
-.research-project,
-.gallery {
+main, .intro-section, .research-project, .gallery {
   background: transparent;
   box-shadow: none;
   border-radius: 0;
@@ -120,7 +115,7 @@ section + section {
 }
 
 /* ===== Section Title Styling (applies to ALL sections) ===== */
-section > h1 {
+section h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.25rem;
   margin-bottom: 0.5em;
@@ -129,7 +124,7 @@ section > h1 {
   color: #1a1a1a;
 }
 
-section > h2 {
+section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin-bottom: 0.5em;
@@ -226,10 +221,6 @@ a {
   align-items: start;
 }
 
-.research-text {
-  flex: 2;
-}
-
 .research-image img {
   max-width: 280px;
   height: auto;
@@ -242,15 +233,13 @@ a {
 }
 
 .research-project h2 {
-  margin-bottom: 0.5em;  /* already styled globally */
+  /* inherits global section h2 styling */
 }
 
-/* tighten padding on research section */
 #research {
   padding: 60px 20px;
 }
 
-/* meta text styling */
 .research-text p:first-of-type,
 .research-text p:nth-of-type(2) {
   font-weight: 600;
@@ -279,10 +268,6 @@ a {
 }
 
 /* ===== Wider Content & Paragraphs ===== */
-main {
-  max-width: 1200px;
-}
-
 section p {
   max-width: none;
   width: auto;
@@ -301,4 +286,3 @@ section p {
   height: auto;
   object-fit: cover;
 }
-
