@@ -271,4 +271,72 @@ section p {
   height: auto;
   object-fit: cover;
 }
+/* 1) Use the same sans-serif for body text; keep Playfair for headings */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* 2) Section title styling */
+#research > main > h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5em;
+  border-bottom: 3px solid #004c8c;
+  padding-bottom: 0.25em;
+}
+
+/* 3) Intro paragraph under the section title */
+#research > main > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-size: 1.05rem;
+  max-width: 800px;
+}
+
+/* 4) Each project block */
+.research-project {
+  margin-bottom: 2em;
+}
+
+/* 5) Use a 2-column grid and tighten the gap */
+.research-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* 6) Project headings */
+.research-project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  border-left: 4px solid #004c8c;
+  padding-left: 0.5em;
+}
+
+/* 7) Meta text (date, supervisor) */
+.research-text p:first-of-type,
+.research-text p:nth-of-type(2) {
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+
+/* 8) Body paragraphs in each project */
+.research-text p {
+  margin-bottom: 1em;
+  max-width: none;  /* so they span the full grid column */
+}
+
+/* 9) Shrink overall section padding */
+#research {
+  padding: 60px 20px;
+}
+
 
