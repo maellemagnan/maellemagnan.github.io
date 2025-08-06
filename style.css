@@ -61,15 +61,18 @@ body.home {
 
 /* ===== Full-bleed Star Strip ===== */
 .star-strip {
-  position: relative !important;
-  top: auto !important;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   height: 320px;
   margin: -40px 0 0;
-  z-index: 0 !important;
+  background: url('assets/quasar.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  z-index: 0;
 }
+
 
 .home-wrapper {
   position: relative;
@@ -114,7 +117,7 @@ section + section {
 
 /* ===== About Section Adjustments ===== */
 #about h1 {
-  margin-bottom: 24px;           /* space title from text */
+  margin-bottom: 40px;           /* space title from text */
 }
 
 #about p {
