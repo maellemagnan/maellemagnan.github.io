@@ -199,6 +199,7 @@ a {
 .button-link:hover {
   background-color: rgba(0,95,163,0.15);
   color: #003f7d;
+  border-radius: 6px
 }
 
 /* ===== Research Page Formatting ===== */
