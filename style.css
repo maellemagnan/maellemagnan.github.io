@@ -286,3 +286,6 @@ section p {
   height: auto;
   object-fit: cover;
 }
+#home .hero-heading {
+  border-bottom: none !important;
+}
